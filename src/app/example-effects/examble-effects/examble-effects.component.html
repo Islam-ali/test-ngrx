@@ -1,0 +1,13 @@
+<button class="btn btn-success" (click)="dis()">get posts</button>
+<div class="row">
+    <div class="col-md-4" *ngFor="let item of data">
+        <div class="row p-2">
+            <div class="card text-dark bg-light">
+                <div class="card-body">
+                    <h3 class="">{{item.title | slice:0:20}} <span *ngIf="item.title.length > 20">...</span></h3>
+                    <p>{{item.body | slice:0:100}} <span *ngIf="item.body.length > 100">...</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
